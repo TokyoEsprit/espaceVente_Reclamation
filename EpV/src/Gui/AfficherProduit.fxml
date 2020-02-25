@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="chercher" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AfficherProduitController">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="65.0" prefHeight="230.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="descrip" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="prix" prefWidth="49.0" text="Prix" />
+            <TableColumn fx:id="etat" prefWidth="43.0" text="Etat" />
+            <TableColumn fx:id="img" minWidth="100.0" prefWidth="150.0" text="Image" />
+            <TableColumn fx:id="local" prefWidth="59.0" text="localisation" />
+            <TableColumn fx:id="id" editable="false" minWidth="100.0" prefWidth="150.0" text="id" visible="false" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TableView>
+      <Button fx:id="supp" layoutX="31.0" layoutY="310.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button fx:id="Chercher" layoutX="326.0" layoutY="310.0" mnemonicParsing="false" onAction="#Chercher" text="Chercher" />
+      <Button fx:id="MonEspace" layoutX="496.0" layoutY="22.0" mnemonicParsing="false" onAction="#Ajouter" text="Mon Espace" />
+      <TextField fx:id="ch" layoutX="421.0" layoutY="310.0" />
+      <Button fx:id="Reclamation" layoutX="31.0" layoutY="354.0" mnemonicParsing="false" onAction="#Reclamation" prefHeight="25.0" prefWidth="149.0" text="Passer Reclamation" />
+      <TextField fx:id="idClient" disable="true" layoutX="43.0" layoutY="22.0" visible="false" />
+      <Button fx:id="Consulter" layoutX="113.0" layoutY="310.0" mnemonicParsing="false" onAction="#Consulter" text="Consulter" />
+      <Button fx:id="state" layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#State" text="Statistique" />
+   </children>
+</AnchorPane>
